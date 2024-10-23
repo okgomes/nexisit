@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Web</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- Barra de Navegação -->
+        <header class="top-bar">
+            <div class="logo">
+                <img src="icone.png" alt="Logo"> <!-- Substitua "logo.png" pelo caminho correto da sua imagem -->
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#banner">INÍCIO</a></li> <!-- Atualizado para direcionar ao banner -->
+                    <li><a href="#servicos">SERVIÇOS</a></li>
+                    <li><a href="#sobre-nos">SOBRE NÓS</a></li> <!-- Corrigido para linkar à seção no final da página -->
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Banner Principal -->
+        <section class="banner" id="banner"> <!-- Adicionado ID 'banner' -->
+            <img src="banner.jpg" alt="Imagem de Banner"> <!-- Coloque aqui o caminho para sua imagem de banner -->
+            <div class="banner-text">NEXIS IT</div>
+            <div class="banner-subtext">A SUA SOLUÇÃO EM SUPORTE TÉCNICO E INFRAESTRUTURA DE REDES</div>
+        </section>
+
+        <!-- CONTEUDO SUPORTE -->
+        <main class="conteudo-principal">
+            <h2>Instalação de redes | Helpdesk | Instalação e configuração de CFTV </h2>
+            <div class="linha-azul"></div> <!-- Adicionando a linha azul -->
+
+            <div class="servico-item">
+                <img src="suporte.jpg" alt="Imagem de Suporte Técnico" class="imagem-suporte"> <!-- Caminho para imagem de serviço -->
+                <div class="texto-ao-lado">
+                    <h3>Soluções e Suporte em TI</h3><br><br>
+                    <p>Oferecemos suporte técnico remoto e presencial, sob contrato ou demanda.<br> Atendemos tanto a infraestrutura de TI quanto o suporte para usuários, com<br> soluções sob medida para suas necessidades.</p>
+                    <button class="botao-contato" onclick="scrollToForm()">Entre em contato</button> <!-- Atualizado para rolar para o formulário -->
+                </div>
+            </div>            
+
+            <!-- Seção de Serviços -->
+            <div class="titulo-solucoes" id="servicos"> <!-- Adiciona o ID aqui -->
+                <h2>NOSSAS SOLUÇÕES EM <span class="highlight-ti">TI</span></h2>
+            </div>
+
+            <section class="servicos">
+                <div class="servico-item-card">
+                    <img src="servico1.jpg" alt="Serviço 1">
+                    <h3>HELPDESK REMOTO</h3>
+                    <p class="descricao">Prestamos suporte especializado em otimização de sistemas, incluindo diagnósticos, atualizações e correções para garantir o desempenho eficiente de seus programas e aplicativos.</p>
+                </div>
+                <div class="servico-item-card">
+                    <img src="servico2.jpg" alt="Serviço 2">
+                    <h3>CONFIGURAÇÃO DE COMPUTADORES</h3>
+                    <p class="descricao">Realizamos a instalação e configuração de sistemas operacionais e aplicativos, além da manutenção de hardware, assegurando que o computador funcione perfeitamente.</p>
+                </div>
+                <div class="servico-item-card">
+                    <img src="servico3.jpg" alt="Serviço 3">
+                    <h3>INSTALAÇÃO DE CFTV</h3>
+                    <p class="descricao">Instalamos e configuramos sistemas de CFTV, incluindo software de monitoramento, para garantir a segurança e o controle total das imagens.</p>
+                </div>
+                <div class="servico-item-card">
+                    <img src="servico4.jpg" alt="Serviço 4">
+                    <h3>CONFIGURAÇÃO DE IMPRESSORAS</h3>
+                    <p class="descricao">Realizamos a instalação de impressoras e configuração dos drivers, além de solucionar problemas relacionados ao software, garantindo uma impressão sem interrupções.</p>
+                </div>
+                <div class="servico-item-card">
+                    <img src="servico5.jpg" alt="Serviço 5">
+                    <h3>MONTAGEM DE INFRAESTRUTURA DE REDE</h3>
+                    <p class="descricao">Oferecemos montagem e configuração de infraestrutura de rede, com instalação de cabeamento estruturado e dispositivos, garantindo uma conexão eficiente, robusta e segura.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <h2 class="contact-title">Entre em <span class="highlight">CONTATO</span></h2>
+
+        <div class="contact-section" id="contato"> <!-- Adicionando ID de contato aqui -->
+            <div class="contact-wrapper">
+                <!-- Seção das imagens -->
+                <div class="contact-images" id="contact-images"> <!-- Adicionando ID 'contact-images' -->
+                    <h2>Acesse diretamente nossos canais</h2>
+                    <a href="https://wa.me/5511990108850"><img src="wpp.png" alt="WhatsApp" class="whatsapp"></a>
+                    <a href="https://www.instagram.com/nexis.it?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="insta.png" alt="Instagram"></a>
+                    <div class="linha-azul"></div> <!-- Adicionando a linha azul -->
+                </div>
+                
+                <!-- Formulário de contato -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <h4>SOLICITE UM ORÇAMENTO</h4><br>
+                            <input type="text" id="name" name="name" placeholder="Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="endereco" name="endereco" placeholder="Endereço" required> <!-- Corrigido o id para 'endereco' -->
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="3" placeholder="Escreva sua mensagem" required></textarea>
+                        </div>
+                        <div class="form-group" style="flex-basis: 100%; text-align: center;">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Seção "Sobre Nós" -->
+        <section class="about-section" id="sobre-nos"> <!-- Adicionado ID 'sobre-nos' -->
+            <h2 class="about-title">SOBRE <span class="highlight">NÓS</span></h2>
+            <div class="about-content">
+                <p>
+                    A NexisIT é uma empresa de tecnologia que oferece soluções completas de acordo com a sua necessidade. Somos focados em montagem de infraestrutura de rede, configuração de sistemas CFTV, helpdesk remoto, manutenção e instalação de Hardawre, como computadores e afins, além da configuração de impressoras. Nosso objetivo é transformar a tecnologia em soluções práticas e eficientes, com foco em segurança, confiabilidade e inovação. Estamos comprometidos em entregar sempre o melhor do mercado, trazemos soluções personalizadas que atendem às necessidades de cada cliente nosso, garantindo a excelência em cada projeto. Transformamos tecnologia em soluções!
+                </p>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="contact-info">
+                <p>Email: atendimento.nexisit@gmail.com</p>
+                <p>Telefone: 11 99010-8850</p>
+                <p>São Paulo - Brasil</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript">
+        // Função para rolar até o formulário de contato
+        function scrollToForm() {
+            const contactForm = document.querySelector('.contact-form-container'); // Seleciona o formulário de contato
+            if (contactForm) {
+                contactForm.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' // Garante que o formulário fique visível no início da tela
+                });
+            }
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+    
+            // Coleta os dados do formulário
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var endereco = document.getElementById('endereco').value; // Corrigido para pegar o valor do endereço
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+    
+            // Cria a mensagem para o WhatsApp
+            var whatsappMessage = `Olá, me chamo ${name} \nEndereço: ${endereco} \nE-mail: ${email} \nMensagem: ${message}`;
+            var encodedMessage = encodeURIComponent(whatsappMessage);
+    
+            // Número do WhatsApp (formato internacional)
+            var whatsappNumber = "5511990108850"; // Substitua pelo seu número
+    
+            // Abre o link do WhatsApp
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+        });
+    </script>
+    
+</body>
+</html>
