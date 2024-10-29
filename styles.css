@@ -7,82 +7,118 @@
 
 body, html {
     height: 100%;
-    scroll-behavior: smooth; /* Adiciona rolagem suave */
-    font-family: 'Roboto', sans-serif; /* Fonte padrão */
-    background-color: #f8f9fa; /* Cinza claro */
-    color: #333333; /* Texto escuro */
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
 }
 
-/* Importar a fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Wrapper para manter o conteúdo e o rodapé no lugar */
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura total da tela */
+    min-height: 100vh;
 }
 
-/* Main content que se expande para ocupar o espaço restante */
 main {
-    flex: 1; /* Permite que o main ocupe o espaço restante */
-    margin: 0; /* Remove margens do main */
+    flex: 1;
+    margin: 0;
     padding: 0; 
 }
 
 /* Estilo da barra de navegação no topo */
 .top-bar {
-    background-color: rgba(22, 23, 24, 0.925); /* Azul suave e transparente */
+    background-color: rgba(22, 23, 24, 0.925);
     color: #ffffff;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    justify-content: space-between; /* Espaça a logo e a navegação */
-    padding: 25px 20px; /* Ajuste o padding conforme necessário */
-    position: relative; /* Define a barra de navegação como relativa para posicionamento */
+    align-items: center;
+    padding: 15px; /* Ajustado para telas menores */
+    position: relative;
+    overflow: hidden; /* Evita overflow vertical */
 }
 
-/* Estilo da logo para mantê-la no lado esquerdo */
 .logo {
-    display: flex; /* Alinha a logo verticalmente */
+    position: absolute;
+    left: 20px;
 }
 
 .logo img {
-    height: 30px; /* Define a altura da logo */
-    width: auto; /* Mantém a proporção da largura */
-    max-width: 100px; /* Define uma largura máxima para a logo */
-    object-fit: contain; /* Mantém a proporção da imagem */
-    opacity: 78%; /* Mantém a opacidade */
+    margin-top: 5px;
+    height: 30px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    opacity: 78%;
 }
 
-/* Estilo da navegação */
+/* Centraliza a navegação */
 .navigation {
-    display: flex; /* Exibe os itens em linha */
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: center; /* Centraliza os itens de navegação no espaço restante */
-    flex-grow: 1; /* Faz a navegação ocupar o espaço restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Garante que a navegação ocupe o espaço central */
 }
 
 .navigation ul {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Exibe os itens em linha */
-    gap: 40px; /* Espaçamento entre os itens */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove padding padrão */
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Impede quebra de linha */
 }
 
-/* Estilo dos links de navegação */
+.navigation li {
+    margin: 0 10px; /* Ajustado para dar mais espaço em telas pequenas */
+}
+
 .navigation a {
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 16px; /* Tamanho da fonte aumentado */
-    color: #ffffff; /* Cor do texto */
-    font-weight: 500; /* Peso da fonte médio */
-    transition: color 0.3s; /* Transição suave na mudança de cor */
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Estilo do hover nos links */
 .navigation a:hover {
-    color: #00b7ff; /* Cor no hover */
+    color: #00b7ff;
 }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo img {
+        height: 25px; /* Reduz tamanho da logo em telas menores */
+    }
+
+    .top-bar {
+        padding: 10px; /* Reduz o padding da barra em telas menores */
+    }
+
+    .navigation a {
+        font-size: 14px; /* Diminui a fonte dos itens */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 5px; /* Ajusta ainda mais o padding em telas pequenas */
+    }
+
+    .navigation a {
+        font-size: 12px; /* Diminui ainda mais o tamanho da fonte */
+    }
+
+    .navigation li {
+        margin: 0 5px; /* Diminui a margem entre os itens da lista */
+    }
+}
+
+
+
+
+
+
 
 
 /* Estilo do banner de serviços */
@@ -296,6 +332,13 @@ main {
 
 
 
+
+
+
+
+
+
+
 /* Estilo do título da seção de soluções */
 .titulo-solucoes {
     text-align: center; /* Centraliza o título */
@@ -451,12 +494,12 @@ main {
     max-width: 500px; /* Limita a largura máxima do formulário */
 }
 
-/* Estilo para a seção das imagens */
 .contact-images {
-    margin-left: 100px;
-    text-align: center; /* Centraliza o título e as imagens */
-    margin-bottom: 20px; /* Espaço abaixo da seção de imagens */
+    margin-left: 0; /* Remove o deslocamento lateral */
+    text-align: center; /* Centraliza o conteúdo */
+    width: 100%; /* Ocupa toda a largura disponível */
 }
+
 
 /* Estilo para o título */
 .contact-images h2 {
@@ -484,7 +527,6 @@ main {
 
 /* Estilo específico para ajustar o WhatsApp se necessário */
 .contact-images img.whatsapp {
-    margin-left: 10px;
     margin-right: 15px;
     margin-bottom: 6px;
     width: 50px; /* Ajusta o tamanho da imagem do WhatsApp */
@@ -692,3 +734,5 @@ footer .contact-info h2 {
 footer p {
     margin: 5px 0;
 }
+
+
