@@ -138,7 +138,7 @@ main {
     top: 30%; /* Centraliza verticalmente */
     left: 50%; /* Move o texto mais para a esquerda */
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
-    font-size: 65px; /* Aumenta o tamanho do texto do banner */
+    font-size: 62px; /* Aumenta o tamanho do texto do banner */
     font-weight: bold; /* Negrito para o texto */
     text-align: center; /* Centraliza o texto */
     background: linear-gradient(45deg, rgba(52, 142, 221, 1), rgba(1, 196, 255, 0.5), rgba(52, 142, 221, 1)); /* Gradiente de fundo */
@@ -210,11 +210,11 @@ main {
     }
 
     .banner-text {
-        font-size: 40px; /* Diminui o tamanho do texto do banner em telas menores */
+        font-size: 37px; /* Diminui o tamanho do texto do banner em telas menores */
     }
 
     .banner-subtext {
-        font-size: 18px; /* Diminui o tamanho do subtítulo em telas menores */
+        font-size: 16px; /* Diminui o tamanho do subtítulo em telas menores */
     }
 
     .conteudo-principal {
@@ -241,7 +241,7 @@ main {
 
 @media (max-width: 480px) {
     .banner-text {
-        font-size: 30px; /* Diminui ainda mais o tamanho do texto do banner */
+        font-size: 29px; /* Diminui ainda mais o tamanho do texto do banner */
     }
 
     .banner-subtext {
