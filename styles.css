@@ -168,7 +168,7 @@ main {
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
     color: rgba(255, 255, 255, 0.9); /* Texto claro com leve opacidade */
     font-family: 'Bebas Neue', sans-serif; /* Usa a fonte Bebas Neue */
-    font-size: 40px; /* Aumenta o tamanho da fonte do subtítulo */
+    font-size: 33px; /* Aumenta o tamanho da fonte do subtítulo */
     font-weight: 700; /* Peso da fonte mais forte */
     text-align: center; /* Centraliza o texto */
     letter-spacing: 1px; /* Aumenta o espaçamento entre letras */
