@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 /* Reset de CSS */
 * {
     margin: 0;
@@ -13,7 +15,6 @@ body, html {
     color: #333333;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 .wrapper {
     display: flex;
@@ -33,9 +34,9 @@ main {
     color: #ffffff;
     display: flex;
     align-items: center;
-    padding: 15px; /* Ajustado para telas menores */
+    padding: 15px;
     position: relative;
-    overflow: hidden; /* Evita overflow vertical */
+    overflow: hidden;
 }
 
 .logo {
@@ -54,18 +55,16 @@ main {
 
 /* Centraliza a navegação */
 .navigation {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1; /* Garante que a navegação ocupe o espaço central */
 }
 
 .navigation ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap; /* Impede quebra de linha */
+    gap: 10px; /* Usar gap em vez de margin */
 }
 
 .navigation li {
@@ -734,5 +733,3 @@ footer .contact-info h2 {
 footer p {
     margin: 5px 0;
 }
-
-
