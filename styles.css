@@ -341,7 +341,7 @@ main {
 /* Estilo do título da seção de soluções */
 .titulo-solucoes {
     text-align: center; /* Centraliza o título */
-    margin: 30px 0; /* Margens em cima e embaixo */
+    margin: 80px 0; /* Margens em cima e embaixo */
 }
 
 .titulo-solucoes h2 {
@@ -552,8 +552,7 @@ main {
     color: rgba(22, 23, 24, 0.849);
     font-weight: bold;
     text-align: center; /* Centraliza o título */
-    margin-top: 50px; /* Ajusta a margem superior */
-    margin-bottom: 50px; /* Espaçamento abaixo do título */
+    margin: 40px 0; /* Margens em cima e embaixo */
 }
 
 /* Destaque para a palavra ou parte do título */
