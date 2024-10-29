@@ -11,8 +11,6 @@ body, html {
     font-family: 'Roboto', sans-serif; /* Fonte padrão */
     background-color: #f8f9fa; /* Cinza claro */
     color: #333333; /* Texto escuro */
-    margin: 0; /* Remove margens do body */
-    padding: 0; /* Remove preenchimento do body */
 }
 
 /* Importar a fonte do Google Fonts */
@@ -38,18 +36,14 @@ main {
     color: #ffffff;
     display: flex;
     align-items: center; /* Alinha os itens verticalmente no centro */
-    justify-content: center; /* Centraliza o conteúdo principal */
+    justify-content: space-between; /* Espaça a logo e a navegação */
     padding: 25px 20px; /* Ajuste o padding conforme necessário */
     position: relative; /* Define a barra de navegação como relativa para posicionamento */
 }
 
 /* Estilo da logo para mantê-la no lado esquerdo */
 .logo {
-    position: absolute; /* Posiciona a logo de forma absoluta */
-    left: 10px; /* Mantém a logo à esquerda */
-    display: flex;
-    align-items: center; /* Alinha a logo verticalmente */
-    height: auto; /* Mantém a proporção da altura */
+    display: flex; /* Alinha a logo verticalmente */
 }
 
 .logo img {
@@ -63,8 +57,9 @@ main {
 /* Estilo da navegação */
 .navigation {
     display: flex; /* Exibe os itens em linha */
-    justify-content: center; /* Centraliza os itens de navegação */
     align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens de navegação no espaço restante */
+    flex-grow: 1; /* Faz a navegação ocupar o espaço restante */
 }
 
 .navigation ul {
@@ -75,18 +70,20 @@ main {
     padding: 0; /* Remove padding padrão */
 }
 
+/* Estilo dos links de navegação */
 .navigation a {
     text-decoration: none; /* Remove o sublinhado */
     font-size: 16px; /* Tamanho da fonte aumentado */
-    gap: 30px;
     color: #ffffff; /* Cor do texto */
     font-weight: 500; /* Peso da fonte médio */
     transition: color 0.3s; /* Transição suave na mudança de cor */
 }
 
+/* Estilo do hover nos links */
 .navigation a:hover {
     color: #00b7ff; /* Cor no hover */
 }
+
 
 /* Estilo do banner de serviços */
 .banner {
@@ -104,7 +101,6 @@ main {
     position: absolute;
     top: 30%; /* Centraliza verticalmente */
     left: 50%; /* Move o texto mais para a esquerda */
-    align-items: center;
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
     font-size: 65px; /* Aumenta o tamanho do texto do banner */
     font-weight: bold; /* Negrito para o texto */
@@ -133,7 +129,6 @@ main {
     position: absolute; /* Para posicionar o texto de forma relativa ao banner */
     top: 65%; /* Posição abaixo do texto principal */
     left: 50%; /* Move o texto mais para a esquerda */
-    right: 10%;
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
     color: rgba(255, 255, 255, 0.9); /* Texto claro com leve opacidade */
     font-family: 'Bebas Neue', sans-serif; /* Usa a fonte Bebas Neue */
@@ -164,24 +159,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* Estilo do rodapé fixo */
-footer {
-    background-color: rgba(22, 23, 24, 0.925); /* Azul suave */
-    color: #ffffff;
-    text-align: center;
-    padding: 0px; /* Espaçamento no rodapé */
-    font-size: 10px; /* Tamanho da fonte do rodapé */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-}
-
-footer .contact-info h2 {
-    margin-bottom: 10px;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
     .top-bar {
@@ -193,6 +170,7 @@ footer p {
         flex-direction: column; /* Coloca os itens de navegação em coluna */
         gap: 10px; /* Diminui o espaçamento */
         align-items: center; /* Centraliza os itens */
+        padding: 0; /* Remove padding para lista vertical */
     }
 
     .banner-text {
@@ -237,13 +215,10 @@ footer p {
     .conteudo-principal {
         font-size: 16px; /* Diminui o tamanho da fonte do conteúdo principal */
     }
-
-    footer {
-        font-size: 8px; /* Diminui o tamanho da fonte do rodapé */
-    }
 }
 
 /* Para garantir que a classe do botão tenha a aparência adequada em todas as telas */
+
 .botao {
     padding: 10px 20px; /* Padding do botão */
     background-color: #007bff; /* Azul padrão */
@@ -260,89 +235,86 @@ footer p {
 }
 
 .servico-item {
-    display: flex;
-    align-items: flex-start; /* Alinha os itens ao topo para um visual mais equilibrado */
-    margin-top: 170px; /* Espaçamento entre os itens */
+    display: flex; /* Usando flexbox */
+    flex-direction: row; /* Direção do flex */
+    align-items: flex-start; /* Alinha itens no início */
+    margin-top: 170px;
     margin-bottom: 200px;
-    gap: 40px; /* Espaçamento entre a imagem e o texto */
-    background-color: #f8f9fa; /* Cor de fundo suave para destacar a seção */
+    gap: 40px; /* Espaçamento entre imagem e texto */
+    background-color: #f8f9fa;
     padding: 20px;
-    border-radius: 12px; /* Bordas arredondadas para um design mais moderno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o contêiner */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 2300px; /* Limite máximo de largura */
+    margin: 0 auto; /* Centraliza o contêiner */
 }
 
 .imagem-suporte {
-    max-width: 650px; /* Ajusta a largura máxima para um tamanho mais proporcional */
+    max-width: 800px; /* Largura máxima da imagem */
+    width: 100%; /* A imagem ocupará 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 6px; /* Cantos arredondados para um toque suave */
-    margin-left: -5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para a imagem */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .texto-ao-lado {
     flex: 1; /* Permite que o texto ocupe o espaço restante */
-    margin-top: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px; /* Tamanho da fonte para melhor legibilidade */
-    color: rgba(22, 23, 24, 0.815); /* Cor do texto para bom contraste */
 }
 
 .texto-ao-lado h3 {
-    font-size: 32px; /* Tamanho do título para destacá-lo */
-    margin-bottom: 15px; /* Espaço entre o título e o parágrafo */
-    color: rgba(22, 23, 24, 0.815); /* Cor do título para maior destaque */
+    font-size: 28px; /* Tamanho do título ajustado */
+    margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
+    color: rgba(22, 23, 24, 0.815); /* Cor do título */
 }
 
 .texto-ao-lado p {
     margin: 0; /* Remove a margem padrão do parágrafo */
-    line-height: 1.6; /* Aumenta o espaçamento entre linhas para legibilidade */
-    color: #555; /* Cor do texto para maior suavidade e contraste */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+    color: #555; /* Cor do texto */
 }
 
 .botao-contato {
     background-color: rgba(22, 23, 24, 0.815); /* Cor de fundo */
     color: #fff; /* Cor do texto branca */
     border: none; /* Remove bordas padrão */
-    padding: 10px 24px; /* Espaçamento interno para tornar o botão mais clicável */
-    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    padding: 10px 24px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor */
     font-size: 15px; /* Tamanho da fonte */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease; /* Efeito de transição suave */
-    margin-top: 40px; /* Espaço entre o texto e o botão */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+    margin-top: 20px; /* Espaço entre o texto e o botão */
     display: inline-flex; /* Alinha o conteúdo dentro do botão */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-
 }
 
 .botao-contato:hover {
-    background-color: rgba(22, 23, 24, 0.63) /* Cor de fundo mais escura ao passar o mouse */
+    background-color: rgba(22, 23, 24, 0.63); /* Cor de fundo mais escura ao passar o mouse */
 }
 
 
-/* Container principal da seção de serviços */
 
 /* Estilo do título da seção de soluções */
 .titulo-solucoes {
     text-align: center; /* Centraliza o título */
-    margin-top: 30px;
-    margin-bottom: 140px; /* Espaçamento abaixo do título */
+    margin: 30px 0; /* Margens em cima e embaixo */
 }
 
 .titulo-solucoes h2 {
     font-size: 36px; /* Tamanho da fonte */
     font-weight: bold; /* Deixa o texto em negrito */
-    color: rgba(22, 23, 24, 0.815); /* Cor do texto geral */
+    color: rgba(22, 23, 24, 0.815); /* Cor do texto */
 }
 
 .titulo-solucoes .highlight-ti {
     color: rgba(52, 142, 221, 1); /* Cor azul para o destaque "TI" */
 }
 
-
 .services-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os itens quebrem em novas linhas */
     justify-content: center;
     gap: 20px;
     padding: 40px 20px;
@@ -352,10 +324,10 @@ footer p {
 /* Estilo da seção de serviços */
 .servicos {
     display: flex; /* Alinha os itens em linha */
-    justify-content: space-around; /* Espaça uniformemente os itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
-    padding: 40px 20px; /* Adiciona um preenchimento maior ao redor da seção */
-    background-color: #e9ecef; /* Fundo claro para destacar a seção de serviços */
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    padding: 40px 20px; /* Preenchimento maior */
+    background-color: #e9ecef; /* Fundo claro */
 }
 
 .servico-item-card {
@@ -364,10 +336,10 @@ footer p {
     max-width: 350px; /* Largura máxima para os itens */
     max-height: 650px; /* Altura máxima para os itens */
     margin: 15px; /* Margem entre os itens */
-    text-align: center; /* Centraliza o texto dentro do card */
+    text-align: center; /* Centraliza o texto */
     background-color: #ffffff; /* Fundo branco para os cards */
     border-radius: 10px; /* Cantos mais arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para os cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px; /* Preenchimento interno do card */
     transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
 }
@@ -379,12 +351,12 @@ footer p {
 
 .servico-item-card img {
     width: 100%; /* Ajusta a imagem para ocupar a largura do card */
-    max-width: 200px; /* Define uma largura máxima para manter o tamanho uniforme */
-    height: 200px; /* Define uma altura fixa para todas as imagens */
-    object-fit: cover; /* Garante que a imagem se ajuste ao tamanho definido sem distorcer */
+    max-width: 200px; /* Define uma largura máxima */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem se ajuste */
     border-radius: 4px; /* Cantos arredondados para a imagem */
-    margin: 0 auto 24px auto; /* Centraliza a imagem e adiciona espaço abaixo dela */
-    display: block; /* Remove qualquer espaço adicional em linha */
+    margin: 0 auto 24px auto; /* Centraliza a imagem */
+    display: block; /* Remove espaço adicional */
 }
 
 .servico-item-card h3 {
@@ -396,45 +368,100 @@ footer p {
 
 .servico-item-card .descricao {
     font-size: 19px; /* Tamanho da fonte da descrição */
-    color: #6c757d; /* Texto em cinza médio para melhor contraste */
-    line-height: 1.5; /* Aumenta o espaçamento entre linhas para legibilidade */
+    color: #6c757d; /* Texto em cinza médio */
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
 }
 
+/* Media Queries para Ajustes Responsivos */
+@media (max-width: 768px) {
+    .titulo-solucoes h2 {
+        font-size: 28px; /* Tamanho da fonte reduzido para telas pequenas */
+    }
+
+    .texto-ao-lado h3 {
+        font-size: 24px; /* Tamanho do título reduzido */
+    }
+
+    .texto-ao-lado {
+        font-size: 16px; /* Tamanho da fonte reduzido */
+    }
+
+    .servico-item {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        margin-top: 50px; /* Ajuste do espaço entre os itens */
+    }
+
+    .botao-contato {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-solucoes h2 {
+        font-size: 24px; /* Tamanho da fonte ainda mais reduzido */
+    }
+
+    .servico-item-card h3 {
+        font-size: 20px; /* Tamanho do título reduzido */
+    }
+
+    .servico-item-card .descricao {
+        font-size: 16px; /* Tamanho da fonte da descrição reduzido */
+    }
+
+    .servico-item-card img {
+        height: 150px; /* Altura da imagem reduzida */
+    }
+}
+
+
+
+
+
+
+
+
 /* FIM DA RESPONSASIVIDADE */
+
+
+
 
 /* Contêiner principal que engloba imagens e o formulário */
 .contact-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 50px;
-    margin-top: 399px;
-    margin-left: 150px;
-    margin-bottom: 200px;
+    flex-direction: column; /* Muda para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px; /* Reduz o padding */
+    margin-top: 50px; /* Ajusta a margem superior */
+    margin-bottom: 100px; /* Ajusta a margem inferior */
     background-color: #e9ecef; /* Cor de fundo da seção */
-    padding: 20px; /* Espaço interno para afastar o conteúdo das bordas */
-    border-radius: 8px; /* Borda arredondada */
 }
 
 /* Estilo do contêiner do formulário */
 .contact-form-container {
     display: flex;
+    margin-left: 0; /* Removido para manter o formulário à direita */
     justify-content: center;
     background-color: white; /* Fundo branco para o formulário */
     padding: 30px;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 2px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    width: 100%; /* Permite que o formulário ocupe a largura total */
+    max-width: 500px; /* Limita a largura máxima do formulário */
 }
 
 /* Estilo para a seção das imagens */
 .contact-images {
+    margin-left: 100px;
     text-align: center; /* Centraliza o título e as imagens */
+    margin-bottom: 20px; /* Espaço abaixo da seção de imagens */
 }
 
 /* Estilo para o título */
 .contact-images h2 {
-    margin-bottom: 55px; /* Espaço abaixo do título */
-    font-size: 30px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 24px; /* Tamanho da fonte reduzido */
     color: rgba(22, 23, 24, 0.815); /* Cor do texto */
     font-weight: bold; /* Negrito para o título */
 }
@@ -443,13 +470,13 @@ footer p {
 .contact-images a {
     display: inline-block; /* As imagens ficam uma ao lado da outra */
     align-items: center; /* Alinha verticalmente os itens ao centro */
-    margin-right: 25px; /* Espaço entre as imagens */
+    margin-right: 15px; /* Espaço entre as imagens */
 }
 
 /* Estilo das imagens */
 .contact-images img {
-    width: 71px; /* Define o mesmo tamanho para todas as imagens */
-    height: 71px; /* Garante que a altura também seja igual */
+    width: 60px; /* Define um tamanho padrão para todas as imagens */
+    height: 60px; /* Garante que a altura também seja igual */
     cursor: pointer; /* Indica que a imagem é clicável */
     transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
     border-radius: 10%; /* Borda arredondada para as imagens */
@@ -457,13 +484,11 @@ footer p {
 
 /* Estilo específico para ajustar o WhatsApp se necessário */
 .contact-images img.whatsapp {
-    margin-left: 20px;
-    margin-right: 25px;
-    margin-top: 0; /* Remove qualquer margem superior que possa estar afetando */
+    margin-left: 10px;
+    margin-right: 15px;
     margin-bottom: 6px;
-    width: 63px; /* Ajusta o tamanho da imagem do WhatsApp */
-    height: 63px; /* Garante a altura */
-
+    width: 50px; /* Ajusta o tamanho da imagem do WhatsApp */
+    height: 50px; /* Garante a altura */
 }
 
 /* Efeito de hover nas imagens */
@@ -472,38 +497,22 @@ footer p {
     opacity: 0.9; /* Reduz um pouco a opacidade no hover */
 }
 
-/* Para centralizar o formulário à direita */
-.contact-form-container {
-    flex: 1; /* Faz o formulário ocupar o espaço restante */
-}
-
-
 /* Estilo da seção de contato */
 .contact-section {
     background: #e9ecef;
-    padding: 40px; /* Espaçamento interno da seção */
+    padding: 20px; /* Reduz o padding */
     margin: 20px auto;
-    max-width: 95%; /* Largura máxima de 90% da tela */
-}
-
-/* Estilo para o contêiner que envolve o título */
-.contact-section {
-    display: flex;
-    margin-bottom: 100px;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Ocupar a altura total da viewport */
-    background-color: #e9ecef; /* Cor de fundo da seção */
+    max-width: 95%; /* Largura máxima de 95% da tela */
 }
 
 /* Estilo do título com margens */
 .contact-title {
-    font-size: 40px;
+    font-size: 30px; /* Tamanho reduzido */
     color: rgba(22, 23, 24, 0.849);
     font-weight: bold;
     text-align: center; /* Centraliza o título */
-    margin-top: 145px;
-    margin-bottom: 130px; /* Espaçamento abaixo do título */
+    margin-top: 50px; /* Ajusta a margem superior */
+    margin-bottom: 50px; /* Espaçamento abaixo do título */
 }
 
 /* Destaque para a palavra ou parte do título */
@@ -511,30 +520,20 @@ footer p {
     color: rgba(52, 142, 221, 1);
 }
 
-
-/* Estilo do contêiner do formulário */
-.contact-form-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -190px;
-    margin-left: 290px;
-    padding: 20px;
-}
-
 /* Estilo do formulário */
 .contact-form {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 600px;
-    width: 100%;
+    gap: 25px; /* Espaço entre os campos do formulário */
+    max-width: 900px; /* Largura máxima do formulário */
+    width: 100%; /* Permite que o formulário ocupe a largura total */
 }
 
 /* Estilo dos campos do formulário */
 .contact-form input,
 .contact-form textarea {
-    flex: 1;
-    padding: 28px 1px;
+    flex: 1 1 100%; /* Cada campo ocupa a largura total em telas menores */
+    padding: 14px; /* Ajusta o padding */
     border: none;
     border-bottom: 1px solid rgba(22, 23, 24, 0.815);
     background-color: transparent;
@@ -544,7 +543,7 @@ footer p {
 /* Estilo do botão de envio */
 .contact-form button {
     background-color: rgba(22, 23, 24, 0.815);
-    margin-top: 38px;
+    margin-top: 20px; /* Ajusta a margem superior */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -554,20 +553,39 @@ footer p {
     font-weight: bold;
 }
 
-
 /* Efeito de hover no botão */
 .contact-form button:hover {
     background-color: rgba(24, 22, 22, 0.671);
     transition: 0.2s;
-    transform: translateY(-1px);
+    transform: translateY(-1px); /* Eleva o botão levemente no hover */
 }
-
 
 /* Estilo para o layout em duas colunas */
 .contact-form .form-group {
-    flex: 1 1 50%; /* Cada campo ocupa cerca de 48% do espaço, formando duas colunas */
+    flex: 1 1 100%; /* Cada campo ocupa a largura total em telas menores */
     display: flex; /* Flexbox para alinhar conteúdo */
     flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+/* Media Queries para ajustar em telas menores */
+@media (min-width: 768px) {
+    .contact-wrapper {
+        flex-direction: row; /* Volta para linha em telas maiores */
+    }
+
+    .contact-form-container {
+        margin-left: auto; /* Move o formulário para o lado direito */
+        margin-top: 0; /* Ajusta a margem superior */
+        max-width: 700px
+    }
+
+    .contact-title {
+        font-size: 40px; /* Tamanho maior em telas maiores */
+    }
+
+    .contact-form .form-group {
+        flex: 1 1 48%; /* Cada campo ocupa cerca de 48% do espaço, formando duas colunas */
+    }
 }
 
 /* Estilo para alinhar o texto da label */
@@ -577,6 +595,10 @@ footer p {
     color: #444; /* Cor do texto da label */
     font-weight: 500; /* Define a espessura da fonte */
 }
+
+
+/* -----------------------------------------*/
+
 
 /* Estilo da seção "Sobre Nós" */
 .about-section {
@@ -603,7 +625,7 @@ footer p {
 
 /* Estilo do texto do conteúdo da seção */
 .about-content {
-    max-width: 97%; /* Largura máxima ajustável */
+    max-width: 100%; /* Largura máxima ajustável */
     background-color: rgba(22, 23, 24, 0.05); /* Fundo leve para o texto */
     padding: 40px; /* Espaçamento interno do conteúdo */
     font-size: 18px; /* Tamanho do texto */
