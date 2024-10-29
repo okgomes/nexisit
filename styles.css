@@ -163,7 +163,7 @@ main {
 
 .banner-subtext {
     position: absolute; /* Para posicionar o texto de forma relativa ao banner */
-    top: 65%; /* Posição abaixo do texto principal */
+    top: 62%; /* Posição abaixo do texto principal */
     left: 50%; /* Move o texto mais para a esquerda */
     transform: translate(-50%, -50%); /* Ajusta a posição para o centro */
     color: rgba(255, 255, 255, 0.9); /* Texto claro com leve opacidade */
