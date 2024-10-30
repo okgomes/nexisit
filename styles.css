@@ -120,6 +120,11 @@ main {
     .navigation li {
         margin: 0 5px; /* Diminui a margem entre os itens da lista */
     }
+
+    .logo img {
+        height: 14px; /* Reduz o tamanho da logo em telas menores */
+    }
+    
 }
 
 
