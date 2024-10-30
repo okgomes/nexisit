@@ -1,93 +1,101 @@
+/* Importa a fonte Roboto do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Reset de CSS */
+/* Reset de CSS - remove margens e preenchimentos padrão e aplica box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Define o modelo de box-sizing para incluir margens e preenchimentos no cálculo da largura e altura */
 }
 
+/* Estiliza o corpo e o HTML */
 body, html {
-    height: 100%;
-    scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333333;
+    height: 100%; /* Define a altura do body e html como 100% do viewport */
+    scroll-behavior: smooth; /* Adiciona rolagem suave para links de âncoras */
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto como fonte padrão */
+    background-color: #f8f9fa; /* Define a cor de fundo como um cinza claro */
+    color: #333333; /* Define a cor do texto como um cinza escuro */
 }
 
-
+/* Wrapper principal que envolve todo o conteúdo */
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    min-height: 100vh; /* Garante que o wrapper ocupe no mínimo 100% da altura da tela */
 }
 
+/* Estiliza a seção principal da página */
 main {
-    flex: 1;
-    margin: 0;
-    padding: 0; 
+    flex: 1; /* Permite que o main cresça para preencher o espaço restante */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimento */
 }
 
 /* Estilo da barra de navegação no topo */
 .top-bar {
-    background-color: rgba(22, 23, 24, 0.925);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    position: relative;
-    overflow: hidden;
+    background-color: rgba(22, 23, 24, 0.925); /* Cor de fundo escura com opacidade */
+    color: #ffffff; /* Define a cor do texto como branco */
+    display: flex; /* Usa Flexbox para o layout dos itens */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    padding: 15px; /* Adiciona preenchimento interno */
+    position: relative; /* Permite que elementos filhos sejam posicionados em relação a este elemento */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites da barra */
 }
 
+/* Estilo da logo */
 .logo {
-    position: absolute;
-    left: 20px;
+    position: absolute; /* Posiciona a logo de forma absoluta dentro da barra */
+    left: 20px; /* Coloca a logo a 20px do lado esquerdo */
 }
 
+/* Estiliza a imagem da logo */
 .logo img {
-    margin-top: 5px;
-    height: 30px;
-    width: auto;
-    max-width: 100px;
-    object-fit: contain;
-    opacity: 78%;
+    margin-top: 5px; /* Adiciona margem superior */
+    height: 30px; /* Define altura fixa da logo */
+    width: auto; /* Mantém a proporção da imagem */
+    max-width: 100px; /* Limita a largura máxima da imagem */
+    object-fit: contain; /* Garante que a imagem seja contida dentro das dimensões sem distorção */
+    opacity: 85%; /* Define a opacidade da imagem */
 }
 
-/* Centraliza a navegação */
+/* Estilo da navegação */
 .navigation {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1; /* Permite que a navegação cresça para preencher o espaço restante */
+    display: flex; /* Usa Flexbox para organizar os itens da navegação */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
+/* Estilo da lista de navegação */
 .navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 10px; /* Usar gap em vez de margin */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Usa Flexbox para os itens da lista */
+    gap: 10px; /* Espaço entre os itens da lista */
 }
 
+/* Estilo de cada item da navegação */
 .navigation li {
-    margin: 0 10px; /* Ajustado para dar mais espaço em telas pequenas */
+    margin: 0 10px; /* Adiciona margem horizontal entre os itens */
 }
 
+/* Estilo dos links da navegação */
 .navigation a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Define o tamanho da fonte */
+    color: #ffffff; /* Define a cor do texto como branco */
+    font-weight: 500; /* Define a espessura da fonte */
+    transition: color 0.3s; /* Adiciona transição suave para a mudança de cor */
 }
 
+/* Efeito de hover nos links */
 .navigation a:hover {
-    color: #00b7ff;
+    color: #00b7ff; /* Muda a cor do texto quando o mouse está sobre o link */
 }
 
-
-/* Responsividade */
+/* Responsividade - Estilos para telas menores */
 @media (max-width: 768px) {
     .logo img {
-        height: 25px; /* Reduz tamanho da logo em telas menores */
+        height: 24px; /* Reduz o tamanho da logo em telas menores */
     }
 
     .top-bar {
@@ -95,29 +103,24 @@ main {
     }
 
     .navigation a {
-        font-size: 14px; /* Diminui a fonte dos itens */
+        font-size: 11px; /* Diminui a fonte dos itens da navegação */
     }
 }
 
+/* Estilos para telas ainda menores */
 @media (max-width: 480px) {
     .top-bar {
         padding: 5px; /* Ajusta ainda mais o padding em telas pequenas */
     }
 
     .navigation a {
-        font-size: 12px; /* Diminui ainda mais o tamanho da fonte */
+        font-size: 9px; /* Diminui ainda mais o tamanho da fonte dos itens */
     }
 
     .navigation li {
         margin: 0 5px; /* Diminui a margem entre os itens da lista */
     }
 }
-
-
-
-
-
-
 
 
 /* Estilo do banner de serviços */
@@ -196,29 +199,18 @@ main {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .top-bar {
-        flex-direction: column; /* Alinha itens em coluna em telas pequenas */
-        padding: 10px; /* Ajusta padding */
-    }
-
-    .navigation ul {
-        flex-direction: column; /* Coloca os itens de navegação em coluna */
-        gap: 10px; /* Diminui o espaçamento */
-        align-items: center; /* Centraliza os itens */
-        padding: 0; /* Remove padding para lista vertical */
-    }
-
+    
     .banner-text {
         font-size: 37px; /* Diminui o tamanho do texto do banner em telas menores */
     }
 
     .banner-subtext {
-        font-size: 16px; /* Diminui o tamanho do subtítulo em telas menores */
+        font-size: 14px; /* Diminui o tamanho do subtítulo em telas menores */
     }
 
     .conteudo-principal {
         padding: 30px; /* Reduz o padding para telas menores */
-        font-size: 18px; /* Diminui o tamanho da fonte */
+        font-size: 14px; /* Diminui o tamanho da fonte */
     }
 
     .linha-azul {
@@ -244,11 +236,11 @@ main {
     }
 
     .banner-subtext {
-        font-size: 16px; /* Diminui o tamanho do subtítulo */
+        font-size: 14px; /* Diminui o tamanho do subtítulo */
     }
 
     .conteudo-principal {
-        font-size: 16px; /* Diminui o tamanho da fonte do conteúdo principal */
+        font-size: 13px; /* Diminui o tamanho da fonte do conteúdo principal */
     }
 }
 
@@ -328,14 +320,6 @@ main {
 .botao-contato:hover {
     background-color: rgba(22, 23, 24, 0.63); /* Cor de fundo mais escura ao passar o mouse */
 }
-
-
-
-
-
-
-
-
 
 
 /* Estilo do título da seção de soluções */
@@ -455,17 +439,6 @@ main {
         height: 150px; /* Altura da imagem reduzida */
     }
 }
-
-
-
-
-
-
-
-
-/* FIM DA RESPONSASIVIDADE */
-
-
 
 
 /* Contêiner principal que engloba imagens e o formulário */
