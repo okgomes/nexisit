@@ -95,7 +95,7 @@ main {
 /* Responsividade - Estilos para telas menores */
 @media (max-width: 768px) {
     .logo img {
-        height: 19px; /* Reduz o tamanho da logo em telas menores */
+        height: 18px; /* Reduz o tamanho da logo em telas menores */
     }
 
     .top-bar {
