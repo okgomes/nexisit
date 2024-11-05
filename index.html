@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexis IT</title>
+    <title>NEXIS IT</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
 
     <!-- Link para o favicon -->
@@ -14,20 +14,36 @@
 
     <div class="wrapper">
 
-        <!-- Barra de Navegação -->
-        <header class="top-bar">
-            <div class="logo">
-                <img src="icone.png" alt="Logo"> 
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#banner">INÍCIO</a></li>
-                    <li><a href="#servicos">SERVIÇOS</a></li>
-                    <li><a href="#sobre-nos">SOBRE NÓS</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
-                </ul>
-            </nav>
-        </header>
+                        <!-- Barra de Navegação -->
+                <header class="top-bar">
+                    <div class="logo">
+                        <img src="icone.png" alt="Logo"> 
+                    </div>
+                    <nav class="navigation">
+                        <ul>
+                            <li><a href="#banner">INÍCIO</a></li>
+                            <li><a href="#servicos">SERVIÇOS</a></li>
+                            <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                            <li><a href="#contato">CONTATO</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </header>
+
+                <div class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="#banner">INÍCIO</a></li>
+                        <li><a href="#servicos">SERVIÇOS</a></li>
+                        <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                    </ul>
+                </div>
+
+
         
         
         <!--- Banner Principal --->
@@ -178,6 +194,35 @@
             // Abre o link do WhatsApp
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
         });
+
+
+                                                                // Animação do menu hamburguer mobile
+                document.getElementById('menu-toggle').onclick = function() {
+                    var mobileMenu = document.getElementById('mobile-menu');
+                    var menuToggle = document.getElementById('menu-toggle');
+
+                    // Alterna a classe para a animação do menu hamburguer
+                    menuToggle.classList.toggle('active');
+                    
+                    // Alterna a visibilidade do menu móvel
+                    if (mobileMenu.classList.contains('active')) {
+                        // Remove a classe active para esconder com animação
+                        mobileMenu.classList.remove('active');
+                        setTimeout(function() {
+                            mobileMenu.style.display = 'none'; // Oculta o menu após a animação
+                        }, 500); // Tempo igual ao da animação (500ms)
+                    } else {
+                        // Exibe o menu antes de adicionar a classe active
+                        mobileMenu.style.display = 'block';
+                        setTimeout(function() {
+                            mobileMenu.classList.add('active'); // Adiciona a classe active para mostrar com animação
+                        }, 10); // Um pequeno delay para garantir que o display seja aplicado
+                    }
+                };
+
+
+
+
     </script>
     
 </body>
