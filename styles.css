@@ -44,12 +44,12 @@ main {
 /* Estilo da logo */
 .logo {
     position: absolute;
-    left: 10px;
+    left: 5px;
 }
 
 .logo img {
     margin-top: 5px;
-    height: 35px;
+    height: 33px;
     width: auto;
     max-width: 100px;
     object-fit: contain;
@@ -178,7 +178,7 @@ main {
 /* Responsividade - Estilos para telas menores */
 @media (max-width: 768px) {
     .logo img {
-        height: 23px; /* Reduz o tamanho da logo em telas menores */
+        height: 26px; /* Reduz o tamanho da logo em telas menores */
     }
 
     .top-bar {
@@ -214,7 +214,7 @@ main {
     }
 
     .logo img {
-        height: 19px; /* Reduz o tamanho da logo em telas menores */
+        height: 22px; /* Reduz o tamanho da logo em telas menores */
     }
 }
 
