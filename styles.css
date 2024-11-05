@@ -3,94 +3,185 @@
 
 /* Reset de CSS - remove margens e preenchimentos padrão e aplica box-sizing */
 * {
-    margin: 0; /* Remove a margem padrão de todos os elementos */
-    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
-    box-sizing: border-box; /* Define o modelo de box-sizing para incluir margens e preenchimentos no cálculo da largura e altura */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Estiliza o corpo e o HTML */
 body, html {
-    height: 100%; /* Define a altura do body e html como 100% do viewport */
-    scroll-behavior: smooth; /* Adiciona rolagem suave para links de âncoras */
-    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto como fonte padrão */
-    background-color: #f8f9fa; /* Define a cor de fundo como um cinza claro */
-    color: #333333; /* Define a cor do texto como um cinza escuro */
+    height: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto */
+    background-color: #f8f9fa;
+    color: #333333;
 }
 
 /* Wrapper principal que envolve todo o conteúdo */
 .wrapper {
-    display: flex; /* Usa Flexbox para layout */
-    flex-direction: column; /* Organiza os elementos em uma coluna */
-    min-height: 100vh; /* Garante que o wrapper ocupe no mínimo 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Estiliza a seção principal da página */
 main {
-    flex: 1; /* Permite que o main cresça para preencher o espaço restante */
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove preenchimento */
+    flex: 1;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilo da barra de navegação no topo */
 .top-bar {
-    background-color: rgba(22, 23, 24, 0.925); /* Cor de fundo escura com opacidade */
-    color: #ffffff; /* Define a cor do texto como branco */
-    display: flex; /* Usa Flexbox para o layout dos itens */
-    align-items: center; /* Alinha verticalmente os itens ao centro */
-    padding: 15px; /* Adiciona preenchimento interno */
-    position: relative; /* Permite que elementos filhos sejam posicionados em relação a este elemento */
-    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites da barra */
+    background-color: rgba(22, 23, 24, 0.925);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
 }
 
 /* Estilo da logo */
 .logo {
-    position: absolute; /* Posiciona a logo de forma absoluta dentro da barra */
-    left: 20px; /* Coloca a logo a 20px do lado esquerdo */
+    position: absolute;
+    left: 20px;
 }
 
-/* Estiliza a imagem da logo */
 .logo img {
-    margin-top: 5px; /* Adiciona margem superior */
-    height: 30px; /* Define altura fixa da logo */
-    width: auto; /* Mantém a proporção da imagem */
-    max-width: 100px; /* Limita a largura máxima da imagem */
-    object-fit: contain; /* Garante que a imagem seja contida dentro das dimensões sem distorção */
-    opacity: 85%; /* Define a opacidade da imagem */
+    margin-top: 5px;
+    height: 30px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    opacity: 85%;
 }
 
 /* Estilo da navegação */
 .navigation {
-    flex: 1; /* Permite que a navegação cresça para preencher o espaço restante */
-    display: flex; /* Usa Flexbox para organizar os itens da navegação */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Estilo da lista de navegação */
 .navigation ul {
-    list-style: none; /* Remove os marcadores padrão da lista */
-    display: flex; /* Usa Flexbox para os itens da lista */
-    gap: 10px; /* Espaço entre os itens da lista */
+    list-style: none;
+    display: flex;
+    gap: 10px;
 }
 
-/* Estilo de cada item da navegação */
 .navigation li {
-    margin: 0 10px; /* Adiciona margem horizontal entre os itens */
+    margin: 0 10px;
 }
 
-/* Estilo dos links da navegação */
 .navigation a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 16px; /* Define o tamanho da fonte */
+    text-decoration: none;
+    font-size: 16px;
     color: #ffffff; /* Define a cor do texto como branco */
-    font-weight: 500; /* Define a espessura da fonte */
-    transition: color 0.3s; /* Adiciona transição suave para a mudança de cor */
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 /* Efeito de hover nos links */
 .navigation a:hover {
-    color: #00b7ff; /* Muda a cor do texto quando o mouse está sobre o link */
+    color: #00b7ff;
 }
+
+/* Estilo do menu hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    outline: none;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+.menu-toggle .bar {
+    height: 2px;
+    width: 21px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: all 0.4s;
+}
+
+/* Animação de mudança do menu hambúrguer */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Estilo do menu móvel */
+.mobile-menu {
+    display: none;
+    background-color: rgb(39, 41, 43);
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: 100px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    border-radius: 2px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateX(100%) scale(0.5) rotate(10deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Estilo ativo do menu móvel */
+.mobile-menu.active {
+    display: block;
+    transform: translateX(0) scale(1) rotate(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo da lista do menu móvel */
+.mobile-menu ul {
+    list-style: none;
+    padding: 10px 0;
+    pointer-events: auto;
+}
+
+/* Estilo de cada item do menu móvel */
+.mobile-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Estilo dos links do menu móvel */
+.mobile-menu a {
+    text-decoration: none;
+    color: #ffffff; /* Cor do texto como branco */
+    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto */
+    font-size: 13px;
+    font-weight: 500; /* Peso da fonte Roboto */
+    transition: color 0.3s;
+}
+
+/* Efeito de hover nos links do menu móvel */
+.mobile-menu a:hover {
+    color: #00b7ff;
+}
+
+
+
+
+
+
+
+
 
 /* Responsividade - Estilos para telas menores */
 @media (max-width: 768px) {
@@ -100,6 +191,15 @@ main {
 
     .top-bar {
         padding: 10px; /* Reduz o padding da barra em telas menores */
+    }
+
+    .navigation {
+        display: none; /* Esconde a barra de navegação normal em telas menores */
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o menu hambúrguer em telas menores */
+        margin-left: auto; /* Move o menu para o lado direito */
     }
 
     .navigation a {
@@ -124,8 +224,21 @@ main {
     .logo img {
         height: 16px; /* Reduz o tamanho da logo em telas menores */
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Estilo do banner de serviços */
