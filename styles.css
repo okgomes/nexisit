@@ -44,12 +44,12 @@ main {
 /* Estilo da logo */
 .logo {
     position: absolute;
-    left: 20px;
+    left: 10px;
 }
 
 .logo img {
     margin-top: 5px;
-    height: 30px;
+    height: 35px;
     width: auto;
     max-width: 100px;
     object-fit: contain;
@@ -102,9 +102,9 @@ main {
 
 .menu-toggle .bar {
     height: 2px;
-    width: 21px;
+    width: 17px;
     background-color: #ffffff;
-    margin: 3px 0;
+    margin: 2px 0;
     transition: all 0.4s;
 }
 
@@ -128,7 +128,7 @@ main {
     position: absolute;
     top: 44px;
     right: 0;
-    width: 100px;
+    width: 90px;
     padding: 0 10px;
     box-sizing: border-box;
     z-index: 10;
@@ -156,7 +156,7 @@ main {
 
 /* Estilo de cada item do menu móvel */
 .mobile-menu li {
-    margin: 10px 0;
+    margin: 5px 0;
     text-align: center;
 }
 
@@ -165,7 +165,7 @@ main {
     text-decoration: none;
     color: #ffffff; /* Cor do texto como branco */
     font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto */
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 500; /* Peso da fonte Roboto */
     transition: color 0.3s;
 }
@@ -175,18 +175,10 @@ main {
     color: #00b7ff;
 }
 
-
-
-
-
-
-
-
-
 /* Responsividade - Estilos para telas menores */
 @media (max-width: 768px) {
     .logo img {
-        height: 19px; /* Reduz o tamanho da logo em telas menores */
+        height: 23px; /* Reduz o tamanho da logo em telas menores */
     }
 
     .top-bar {
@@ -222,24 +214,9 @@ main {
     }
 
     .logo img {
-        height: 16px; /* Reduz o tamanho da logo em telas menores */
+        height: 19px; /* Reduz o tamanho da logo em telas menores */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilo do banner de serviços */
 .banner {
@@ -319,11 +296,11 @@ main {
 @media (max-width: 768px) {
     
     .banner-text {
-        font-size: 37px; /* Diminui o tamanho do texto do banner em telas menores */
+        font-size: 39px; /* Diminui o tamanho do texto do banner em telas menores */
     }
 
     .banner-subtext {
-        font-size: 14px; /* Diminui o tamanho do subtítulo em telas menores */
+        font-size: 16px; /* Diminui o tamanho do subtítulo em telas menores */
     }
 
     .conteudo-principal {
@@ -350,7 +327,7 @@ main {
 
 @media (max-width: 480px) {
     .banner-text {
-        font-size: 29px; /* Diminui ainda mais o tamanho do texto do banner */
+        font-size: 30px; /* Diminui ainda mais o tamanho do texto do banner */
     }
 
     .banner-subtext {
@@ -358,7 +335,7 @@ main {
     }
 
     .conteudo-principal {
-        font-size: 13px; /* Diminui o tamanho da fonte do conteúdo principal */
+        font-size: 12px; /* Diminui o tamanho da fonte do conteúdo principal */
     }
 }
 
@@ -395,7 +372,7 @@ main {
 }
 
 .imagem-suporte {
-    max-width: 800px; /* Largura máxima da imagem */
+    max-width: 600px; /* Largura máxima da imagem */
     width: 100%; /* A imagem ocupará 100% da largura do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 6px;
@@ -403,13 +380,12 @@ main {
 }
 
 
-
 .texto-ao-lado {
     flex: 1; /* Permite que o texto ocupe o espaço restante */
 }
 
 .texto-ao-lado h3 {
-    font-size: 28px; /* Tamanho do título ajustado */
+    font-size: 27px; /* Tamanho do título ajustado */
     margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
     color: rgba(22, 23, 24, 0.815); /* Cor do título */
 }
@@ -523,7 +499,7 @@ main {
     }
 
     .texto-ao-lado h3 {
-        font-size: 24px; /* Tamanho do título reduzido */
+        font-size: 22px; /* Tamanho do título reduzido */
     }
 
     .texto-ao-lado {
